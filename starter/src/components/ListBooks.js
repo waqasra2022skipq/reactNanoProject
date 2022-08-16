@@ -1,6 +1,8 @@
 import BookShelf from "./BookShelf"
 import { getAll, update, search } from "../BooksAPI"
 import { useState,useEffect } from "react"
+import SearchBook from "./SearchBook";
+
 
 const ListBooks = (props)=>{
     const [books, setBooks] = useState([]) 
@@ -50,29 +52,35 @@ const ListBooks = (props)=>{
     const updateSearch = async(val)=>{
         let res = await search(val)
         
-        if(res == undefined || res.error == '"empty query"') {
-        updateSearchedBooks([])
+        if(res === undefined || res.error === 'empty query') {
+            updateSearchedBooks([])
         } else {
-        updateSearchedBooks(res)
+            updateSearchedBooks(res)
         }
     }
     return(
-        
-        <div className="list-books">
-          <div className="list-books-title">
-            <h1>MyReads</h1>
-          </div>
-          <div className="list-books-content">
-            <div>
-                <BookShelf title="Currently Reading" books={currentlyReading} changeShelf={changeShelf}/>
-                <BookShelf title="Want To Read" books={wantToRead} changeShelf={changeShelf}/>
-                <BookShelf title="Read" books={read} changeShelf={changeShelf}/>
+        <div>
+        {
+            !showSearchPage ? (<div className="list-books">
+            <div className="list-books-title">
+              <h1>MyReads</h1>
             </div>
-          </div>
-          <div className="open-search">
-            <a onClick={() => props.showSearchPage()}>Add a book</a>
-          </div>
-        </div>
+            <div className="list-books-content">
+              <div>
+                  <BookShelf title="Currently Reading" books={currentlyReading} changeShelf={changeShelf}/>
+                  <BookShelf title="Want To Read" books={wantToRead} changeShelf={changeShelf}/>
+                  <BookShelf title="Read" books={read} changeShelf={changeShelf}/>
+              </div>
+            </div>
+            <div className="open-search">
+              <a href="#" onClick={switchSearch}>Add a book</a>
+            </div>
+          </div>):(
+            <SearchBook showSearchPage={switchSearch} onTextEntered={updateSearch} searchedBooks={searchedBooks} changeShelf={changeShelf}/>
+          )
+        }
+        </div> 
+        
     )
 }
 export default ListBooks

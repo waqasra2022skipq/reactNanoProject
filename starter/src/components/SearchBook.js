@@ -25,7 +25,7 @@ const SearchBook = (props)=>{
           <div className="search-books-results">
             <ol className="books-grid">
               {
-                books.length && books.map((book, key)=>{
+                books && books.map((book, key)=>{
                         return(
                             <li key={key}>
                                 <Book book={book} changeShelf={props.changeShelf}/>

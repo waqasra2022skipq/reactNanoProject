@@ -1,8 +1,8 @@
 const Book = (props)=>{
     const book = props.book
     console.log()
-    const authors = (book.authors == undefined) ? []:book.authors 
-    const imageLinks = (book.imageLinks == undefined) ? {thumbnail:''}:book.imageLinks
+    const authors = (book.authors === undefined) ? []:book.authors 
+    const imageLinks = (book.imageLinks === undefined) ? {thumbnail:''}:book.imageLinks
     const changeShelf = (e)=>{
         if(e.target.value === 'none') return
         book.shelf = e.target.value
@@ -25,11 +25,11 @@ const Book = (props)=>{
                     <option value="none">
                     Move to...
                     </option>
-                    <option value="currentlyReading" disabled={"currentlyReading" == book.shelf}>
+                    <option value="currentlyReading" disabled={"currentlyReading" === book.shelf}>
                     Currently Reading
                     </option>
-                    <option value="wantToRead" disabled={"wantToRead" == book.shelf}>Want to Read</option>
-                    <option value="read" disabled={"read" == book.shelf}>Read</option>
+                    <option value="wantToRead" disabled={"wantToRead" === book.shelf}>Want to Read</option>
+                    <option value="read" disabled={"read" === book.shelf}>Read</option>
                 </select>
                 </div>
             </div>
