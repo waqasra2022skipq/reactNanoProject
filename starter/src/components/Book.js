@@ -4,7 +4,7 @@ const Book = (props)=>{
     const authors = (book.authors === undefined) ? []:book.authors 
     const imageLinks = (book.imageLinks === undefined) ? {thumbnail:''}:book.imageLinks
     const changeShelf = (e)=>{
-        if(e.target.value === 'none') return
+        if(e.target.value === '') return
         book.shelf = e.target.value
         props.changeShelf(book)
     }
@@ -21,15 +21,16 @@ const Book = (props)=>{
                 }}
                 ></div>
                 <div className="book-shelf-changer">
-                <select onChange={changeShelf}>
-                    <option value="none">
+                <select onChange={changeShelf} defaultValue={book.shelf}>
+                    <option value="" disabled>
                     Move to...
                     </option>
                     <option value="currentlyReading" disabled={"currentlyReading" === book.shelf}>
                     Currently Reading
                     </option>
-                    <option value="wantToRead" disabled={"wantToRead" === book.shelf}>Want to Read</option>
+                    <option value="wantToRead" disabled={"wantToRead" === book.shelf} >Want to Read</option>
                     <option value="read" disabled={"read" === book.shelf}>Read</option>
+                    <option value="none" >None</option>
                 </select>
                 </div>
             </div>
