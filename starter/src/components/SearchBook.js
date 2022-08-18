@@ -2,18 +2,17 @@ import Book from "./Book"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-
 const SearchBook = (props)=>{
   const [query, setQuery] = useState("") 
     const getTheInput = (e)=>{
       setQuery(e.target.value)
-      props.onTextEntered(query)
+      props.onTextEntered(e.target.value)
     }
     const books = props.searchedBooks
     return(
         <div className="search-books">
           <div className="search-books-bar">
-            <Link to="/" className="close-search">
+            <Link to="/" className="close-search" onClick={getTheInput}>
             </Link>
             <div className="search-books-input-wrapper">
               <input
