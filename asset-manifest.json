@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/reactNanoProject/static/css/main.9e77a98a.chunk.css",
+    "main.js": "/reactNanoProject/static/js/main.b42c1c83.chunk.js",
+    "main.js.map": "/reactNanoProject/static/js/main.b42c1c83.chunk.js.map",
+    "runtime-main.js": "/reactNanoProject/static/js/runtime-main.307e35d8.js",
+    "runtime-main.js.map": "/reactNanoProject/static/js/runtime-main.307e35d8.js.map",
+    "static/js/2.c2cbf937.chunk.js": "/reactNanoProject/static/js/2.c2cbf937.chunk.js",
+    "static/js/2.c2cbf937.chunk.js.map": "/reactNanoProject/static/js/2.c2cbf937.chunk.js.map",
+    "index.html": "/reactNanoProject/index.html",
+    "static/css/main.9e77a98a.chunk.css.map": "/reactNanoProject/static/css/main.9e77a98a.chunk.css.map",
+    "static/js/2.c2cbf937.chunk.js.LICENSE.txt": "/reactNanoProject/static/js/2.c2cbf937.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/reactNanoProject/static/media/arrow-drop-down.98ef3b31.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.307e35d8.js",
+    "static/js/2.c2cbf937.chunk.js",
+    "static/css/main.9e77a98a.chunk.css",
+    "static/js/main.b42c1c83.chunk.js"
+  ]
+}
