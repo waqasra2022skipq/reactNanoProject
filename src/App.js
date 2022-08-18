@@ -6,7 +6,6 @@ import { useState,useEffect } from "react"
 
 import {Routes, Route} from 'react-router-dom'
 function App() {
-  const [books, setBooks] = useState([]) 
     const [wantToRead, updateWantToRead] = useState([])
     const [currentlyReading, updateCurrentlyReading] = useState([])
     const [read, updateRead] = useState([])
@@ -14,7 +13,6 @@ function App() {
     useEffect(()=>{
         async function fetchBooks(){
             let reBooks = await getAll()
-            setBooks(reBooks)
             updateCats(reBooks)
         }
         fetchBooks()
@@ -46,9 +44,8 @@ function App() {
 
     const changeShelf = async (book)=>{
       await update(book, book.shelf)
-      books.push(book)
-      setBooks(books)
-      updateCats(books)
+      let reBooks = await getAll()
+      updateCats(reBooks)
     }
     const [searchedBooks, updateSearchedBooks] = useState([])
     const updateSearch = async(val)=>{
