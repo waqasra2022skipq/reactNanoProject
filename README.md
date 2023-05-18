@@ -1,6 +1,7 @@
 # MyReads Project
 ### Online link
-    Please test the project at <https://waqasra2022skipq.github.io/reactNanoProjects>
+    Please test the project at  [My Reads]: https://waqasra2022skipq.github.io/reactNanoProjects
+
 ## TL;DR
 
 To get started developing right away:
