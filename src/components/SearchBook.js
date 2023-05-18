@@ -12,7 +12,7 @@ const SearchBook = (props)=>{
     return(
         <div className="search-books">
           <div className="search-books-bar">
-            <Link to="/" className="close-search" onClick={getTheInput}>
+            <Link to="/reactNanoProject" className="close-search" onClick={getTheInput}>
             </Link>
             <div className="search-books-input-wrapper">
               <input

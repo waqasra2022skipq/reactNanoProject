@@ -68,10 +68,10 @@ function App() {
   return (
     <div className="app">
         <Routes>
-          <Route path="/" exact element={<ListBooks changeShelf={changeShelf} read={read} wantToRead={wantToRead} currentlyReading={currentlyReading} />} />
+          <Route path="/reactNanoProject" exact element={<ListBooks changeShelf={changeShelf} read={read} wantToRead={wantToRead} currentlyReading={currentlyReading} />} />
           <Route path="/search" exact element={<SearchBook onTextEntered={updateSearch} searchedBooks={searchedBooks} changeShelf={changeShelf} />} />
         </Routes>
-        <ListBooks  changeShelf={changeShelf} read={read} wantToRead={wantToRead} currentlyReading={currentlyReading}/>
+        {/* <ListBooks  changeShelf={changeShelf} read={read} wantToResad={wantToRead} currentlyReading={currentlyReading}/> */}
     </div>
   );
 }
