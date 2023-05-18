@@ -71,6 +71,7 @@ function App() {
           <Route path="/" exact element={<ListBooks changeShelf={changeShelf} read={read} wantToRead={wantToRead} currentlyReading={currentlyReading} />} />
           <Route path="/search" exact element={<SearchBook onTextEntered={updateSearch} searchedBooks={searchedBooks} changeShelf={changeShelf} />} />
         </Routes>
+        <ListBooks  changeShelf={changeShelf} read={read} wantToRead={wantToRead} currentlyReading={currentlyReading}/>
     </div>
   );
 }
